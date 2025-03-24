@@ -7,6 +7,10 @@
 [![Code Style Prettier](https://img.shields.io/badge/code%20style-prettier-ff7fe1.svg?style=flat-square)](https://github.com/prettier/prettier#readme)
 [![Build Status](https://img.shields.io/github/workflow/status/mefechoel/svelte-navigator/Test?style=flat-square)](https://github.com/mefechoel/svelte-navigator/actions?query=workflow%3ATest)
 
+> This package is a fork of `svelte-navigator`: the postinstall script was
+> removed because it causes issues on Node >= 20.16 and is only useful for
+> development.
+
 > Simple, accessible routing for Svelte.
 
 Svelte Navigator is an accessible and relatively lightweight Single Page App
@@ -37,32 +41,46 @@ React-esque hooks.
 
 ## Table of Contents
 
-- [Getting started](#getting-started)
-- [Installation](#installation)
-- [Usage](#usage)
-- [SSR Caveat](#ssr-caveat)
-- [FAQ](#faq)
-- [Testing](#testing)
-- [API](#api)
-  - [Components](#components)
-    - [`Router`](#router)
-    - [`Link`](#link)
-    - [`Route`](#route)
-  - [Hooks](#hooks)
-    - [`useNavigate`](#usenavigate)
-    - [`useLocation`](#uselocation)
-    - [`useResolve`](#useresolve)
-    - [`useResolvable`](#useresolvable)
-    - [`useMatch`](#usematch)
-    - [`useParams`](#useparams)
-    - [`useFocus`](#usefocus)
-  - [Programmatic Navigation](#programmatic-navigation)
-    - [`navigate`](#navigate)
-  - [Actions](#actions)
-    - [`link`](#link-1)
-    - [`links`](#links)
-  - [Custom History](#custom-history)
-  - [Deploying to Vercel](#deploying-to-vercel)
+- [Svelte Navigator](#svelte-navigator)
+	- [Features](#features)
+	- [Table of Contents](#table-of-contents)
+	- [Getting started](#getting-started)
+	- [Installation](#installation)
+	- [Usage](#usage)
+	- [SSR Caveat](#ssr-caveat)
+	- [FAQ](#faq)
+		- [I'm using Vite. Why am I getting errors with `svelte-navigator`?](#im-using-vite-why-am-i-getting-errors-with-svelte-navigator)
+		- [I'm coming from `svelte-routing`. How can I switch to `svelte-navigator`?](#im-coming-from-svelte-routing-how-can-i-switch-to-svelte-navigator)
+		- [Why am I getting a warning about unused props for my route components?](#why-am-i-getting-a-warning-about-unused-props-for-my-route-components)
+		- [Why don't CSS classes work with `Link`?](#why-dont-css-classes-work-with-link)
+		- [What are the weird rectangles around the headings in my app?](#what-are-the-weird-rectangles-around-the-headings-in-my-app)
+	- [Testing](#testing)
+	- [API](#api)
+		- [Components](#components)
+			- [`Router`](#router)
+					- [Properties](#properties)
+			- [`Link`](#link)
+					- [Properties](#properties-1)
+			- [`Route`](#route)
+					- [Properties](#properties-2)
+		- [Hooks](#hooks)
+			- [`useNavigate`](#usenavigate)
+					- [Parameters](#parameters)
+			- [`useLocation`](#uselocation)
+			- [`useResolve`](#useresolve)
+			- [`useResolvable`](#useresolvable)
+			- [`useMatch`](#usematch)
+			- [`useParams`](#useparams)
+			- [`useFocus`](#usefocus)
+		- [Programmatic Navigation](#programmatic-navigation)
+			- [`navigate`](#navigate)
+					- [Parameters](#parameters-1)
+		- [Actions](#actions)
+			- [`link`](#link-1)
+			- [`links`](#links)
+		- [Custom History](#custom-history)
+	- [Deploying to Vercel](#deploying-to-vercel)
+	- [License](#license)
 
 ## Getting started
 
