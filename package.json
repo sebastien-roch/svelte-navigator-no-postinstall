@@ -1,6 +1,6 @@
 {
   "name": "svelte-navigator-no-postinstall",
-  "version": "3.2.3",
+  "version": "3.2.4",
   "description": "Simple, accessible routing for Svelte",
   "main": "dist/svelte-navigator.umd.js",
   "unpkg": "dist/svelte-navigator.umd.min.js",
