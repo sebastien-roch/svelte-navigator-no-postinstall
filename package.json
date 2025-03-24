@@ -1,5 +1,5 @@
 {
-  "name": "svelte-navigator",
+  "name": "svelte-navigator-no-postinstall",
   "version": "3.2.2",
   "description": "Simple, accessible routing for Svelte",
   "main": "dist/svelte-navigator.umd.js",
@@ -17,12 +17,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mefechoel/svelte-navigator.git"
+    "url": "git+https://github.com/sebastien-roch/svelte-navigator-rm-postinstall.git"
   },
   "bugs": {
-    "url": "https://github.com/mefechoel/svelte-navigator/issues"
+    "url": "https://github.com/sebastien-roch/svelte-navigator-rm-postinstall/issues"
   },
-  "homepage": "https://github.com/mefechoel/svelte-navigator#readme",
+  "homepage": "https://github.com/sebastien-roch/svelte-navigator-rm-postinstall#readme",
   "keywords": [
     "svelte-navigator",
     "svelte",
@@ -60,11 +60,7 @@
     "lint": "eslint . && prettier . --check",
     "lint:fix": "eslint . --fix && prettier . --write",
     "verify-build": "npm run lint && npm test && npm run build",
-    "postinstall": "is-ci || husky install",
-    "prepublishOnly": "npm run verify-build && pinst --disable",
-    "postpublish": "pinst --enable",
-    "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
+    "prepublishOnly": "npm run verify-build"
   },
   "dependencies": {
     "svelte2tsx": "^0.1.151"
